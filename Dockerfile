@@ -38,4 +38,5 @@ RUN ./keycloak-${KEYCLOAK_VERSION}/bin/add-user-keycloak.sh -r master -u admin -
 RUN chmod -R 777 ./keycloak-${KEYCLOAK_VERSION}
 
 # Start the keycloak server.  Listen on all interfaces.
-CMD ["echo ${KEYCLOAK_CMD}","-b","0.0.0.0"]
+#CMD ["echo ${KEYCLOAK_CMD}","-b","0.0.0.0"]
+CMD ["./keycloak-2.5.0.Final/bin/standalone.sh","-b","0.0.0.0"]
